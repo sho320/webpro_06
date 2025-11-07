@@ -1,0 +1,19 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>書籍一覧</title>
+</head>
+<body>
+    <h2>書籍一覧</h2>
+    <table border="1"> <tr><th>ID</th><th>タイトル</th><th>著者</th></tr>
+        <% for(let row of data ) { %>
+            <tr>
+                <td><%= row.id %></td>
+                <td><%= row.title %></td>
+                <td><%= row.author %></td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>
