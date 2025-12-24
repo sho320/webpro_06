@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>保有株一覧</title>
+</head>
+<body>
+    <h2>保有株一覧</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>銘柄名</th>
+            <th>証券コード</th>
+            <th>保有株数</th> <th>取得単価</th> <th>操作</th>
+        </tr>
+        <% for(let row of data) { %>
+        <tr>
+            <td><%= row.id %></td>
+            <td><a href="/stocks/<%= row.id %>"><%= row.name %></a></td>
+            <td><%= row.code %></td>
+            <td><%= row.amount %></td> <td><%= row.price %></td>  <td>
+                <a href="/stocks/edit/<%= row.id %>">編集</a>
+                <a href="/stocks/delete/<%= row.id %>">削除</a>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+    <p>
+        <a href="/stocks/create">新規追加</a> | 
+        <a href="/">メニューに戻る</a>
+    </p>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>編集</title>
+</head>
+<body>
+    <h2>編集</h2>
+    <form action="/dishes/update/<%= data.id %>" method="POST">
+        料理名: <input type="text" name="name" value="<%= data.name %>" required><br>
+        種類: <input type="text" name="type" value="<%= data.type %>" required><br>
+        価格: <input type="number" name="price" value="<%= data.price %>" required><br>
+        <input type="submit" value="更新">
+    </form>
+    <p><a href="/dishes">キャンセル</a></p>
+</body>
+</html>

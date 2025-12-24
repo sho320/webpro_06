@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>新規登録</title>
+</head>
+<body>
+    <h2>新規登録</h2>
+    <form action="/stocks" method="POST">
+        銘柄名: <input type="text" name="name" required><br>
+        証券コード: <input type="text" name="code" required><br>
+        保有株数: <input type="number" name="amount" required><br>
+        取得単価: <input type="number" name="price" required><br>
+        <input type="submit" value="登録">
+    </form>
+    <p><a href="/stocks">キャンセル</a></p>
+</body>
+</html>

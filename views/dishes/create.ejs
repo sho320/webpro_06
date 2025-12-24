@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>新規登録</title>
+</head>
+<body>
+    <h2>新規登録</h2>
+    <form action="/dishes" method="POST">
+        料理名: <input type="text" name="name" required><br>
+        種類: <input type="text" name="type" required><br>
+        価格: <input type="number" name="price" required><br>
+        <input type="submit" value="登録">
+    </form>
+    <p><a href="/dishes">キャンセル</a></p>
+</body>
+</html>

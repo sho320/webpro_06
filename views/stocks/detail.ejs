@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>詳細情報</title>
+</head>
+<body>
+    <h2>詳細情報</h2>
+    <ul>
+        <li>ID: <%= data.id %></li>
+        <li>銘柄名: <%= data.name %></li>
+        <li>証券コード: <%= data.code %></li>
+        <li>保有株数: <%= data.amount %></li>
+        <li>取得単価: <%= data.price %></li>
+    </ul>
+    <p><a href="/stocks">一覧に戻る</a></p>
+</body>
+</html>

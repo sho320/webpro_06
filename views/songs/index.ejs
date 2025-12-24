@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>曲一覧</title>
+</head>
+<body>
+    <h2>曲一覧</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>曲名</th>
+            <th>アーティスト</th>
+            <th>順位</th> <th>操作</th>
+        </tr>
+        <% for(let row of data) { %>
+        <tr>
+            <td><%= row.id %></td>
+            <td><a href="/songs/<%= row.id %>"><%= row.title %></a></td>
+            <td><%= row.artist %></td>
+            <td><%= row.rank %>位</td> <td>
+                <a href="/songs/edit/<%= row.id %>">編集</a>
+                <a href="/songs/delete/<%= row.id %>">削除</a>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+    <p>
+        <a href="/songs/create">新規追加</a> | 
+        <a href="/">メニューに戻る</a>
+    </p>
+</body>
+</html>

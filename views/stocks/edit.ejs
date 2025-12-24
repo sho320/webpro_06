@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>編集</title>
+</head>
+<body>
+    <h2>編集</h2>
+    <form action="/stocks/update/<%= data.id %>" method="POST">
+        銘柄名: <input type="text" name="name" value="<%= data.name %>" required><br>
+        証券コード: <input type="text" name="code" value="<%= data.code %>" required><br>
+        保有株数: <input type="number" name="amount" value="<%= data.amount %>" required><br>
+        取得単価: <input type="number" name="price" value="<%= data.price %>" required><br>
+        <input type="submit" value="更新">
+    </form>
+    <p><a href="/stocks">キャンセル</a></p>
+</body>
+</html>

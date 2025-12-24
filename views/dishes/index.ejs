@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>料理一覧</title>
+</head>
+<body>
+    <h2>料理一覧</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>料理名</th>
+            <th>種類</th>
+            <th>価格</th> <th>操作</th>
+        </tr>
+        <% for(let row of data) { %>
+        <tr>
+            <td><%= row.id %></td>
+            <td><a href="/dishes/<%= row.id %>"><%= row.name %></a></td>
+            <td><%= row.type %></td>
+            <td><%= row.price %>円</td> <td>
+                <a href="/dishes/edit/<%= row.id %>">編集</a>
+                <a href="/dishes/delete/<%= row.id %>">削除</a>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+    <p>
+        <a href="/dishes/create">新規追加</a> | 
+        <a href="/">メニューに戻る</a>
+    </p>
+</body>
+</html>
